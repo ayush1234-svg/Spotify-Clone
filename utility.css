@@ -1,0 +1,91 @@
+.flex{
+    display: flex;
+
+}
+.border{
+    border: 2px solid red;
+    margin: 3px;
+}
+.justify-content{
+    justify-content: center;
+}
+.align-item{
+    align-items: center;
+}
+.bg-black{
+    background-color: black;
+    color: white;
+}
+.invert{
+    filter: invert(1);
+}
+.bg-gray{
+    background-color: #121212;
+}
+.rounded{
+    border-radius: 7px;
+}
+.m-1{
+    margin: 5px;
+}
+.p-1{
+    padding: 18px;
+}
+/* Custom Scrollbar - Dark Theme (Spotify style) */
+::-webkit-scrollbar {
+  width: 10px;               /* scrollbar width */
+  height: 10px;              /* for horizontal scroll */
+}
+
+::-webkit-scrollbar-track {
+  background: #121212;       /* dark background like Spotify */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #535353; /* medium gray thumb */
+  border-radius: 20px;       /* rounded edges */
+  border: 2px solid #121212; /* creates spacing around thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #1db954; /* Spotify green on hover */
+}
+
+/* Firefox (using scrollbar-width) */
+* {
+  scrollbar-width: thin;                /* makes it slim */
+  scrollbar-color: #535353 #121212;     /* thumb color | track color */
+}
+/* Keep list item text white in all states */
+.songlist ul li,
+.songlist ul li * {
+  color: #fff;
+}
+
+/* If there are links inside, ensure all link states stay white */
+.songlist ul li a:link,
+.songlist ul li a:visited,
+.songlist ul li a:hover,
+.songlist ul li a:active,
+.songlist ul li a:focus {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Title-specific: ensure the song title container remains white */
+.songlist .songinfo, 
+.songlist .songinfo div:first-child {
+  color: #fff;
+}
+
+/* Playbar uses filter: invert(1); make sure info/time in playbar are set explicitly */
+.playbar .info,
+.playbar .songtime {
+  color: #000; /* keep black only in playbar */
+}
+
+/* Optional: remove default focus outline if it looks odd on dark bg */
+.songlist ul li:focus,
+.songlist ul li *:focus {
+  outline: none;
+}
